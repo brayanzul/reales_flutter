@@ -1,6 +1,10 @@
 # reales_flutter
 
-A new Flutter project.
+![Reales_Flutter](https://user-images.githubusercontent.com/62777613/226114561-9b56e6da-6710-40e7-a63a-bde4cdf1e2ae.PNG)
+
+# Application Information
+
+Home Screen: Here are All Project Icons, Item Model: All Images, Search Field
 
 ## Getting Started
 
