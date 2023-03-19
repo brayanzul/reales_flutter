@@ -1,5 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:reales_flutter/widgets/search_field.dart';
+import 'package:reales_flutter/widgets/select_category.dart';
+import 'package:reales_flutter/widgets/suggestion_list.dart';
+
+import '../models/item_model.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -45,8 +50,19 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
-            children: const [
+            children: [
               // Okey Now we need to add some widgets
+              const SearchField(),
+              const SelectCategory(),
+              const SizedBox(
+                height: 20.0,
+              ),
+              SuggestionList("Recommendation for you", Item.recommendation),
+              const SizedBox(
+                height: 20.0,
+              ),
+              SuggestionList("Nearby you", Item.nearby),
+              // now let's create a detail screen
             ],
           ),
         ),
