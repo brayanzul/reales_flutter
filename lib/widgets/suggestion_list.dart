@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:reales_flutter/models/item_model.dart';
 import 'package:reales_flutter/widgets/house_card.dart';
 
+import '../screens/details_screen.dart';
+
 class SuggestionList extends StatefulWidget {
   String? title;
   List<Item> items;
@@ -43,7 +45,11 @@ class _SuggestionListState extends State<SuggestionList> {
               scrollDirection: Axis.horizontal,
               itemCount: widget.items.length,
               itemBuilder: (context, index) => 
-                ItemCard(widget.items[index], (){},
+                ItemCard(widget.items[index], (){
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => DetailsScreen(widget.items[index]),),
+                  );
+                },
               ),
             ),
           ),
